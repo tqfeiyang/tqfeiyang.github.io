@@ -1,0 +1,13 @@
+.navbar,
+.sidebar,
+.info,
+.right-menu-wrapper,
+.page-nav-centre-prev,
+.page-nav-centre-next
+{
+	display: none;
+}
+
+.page {
+	padding-top: 0 !important;
+}
