@@ -2,6 +2,7 @@
 .sidebar,
 .info,
 .right-menu-wrapper,
+.buttons,
 .page-nav-centre-prev,
 .page-nav-centre-next
 {
@@ -10,4 +11,10 @@
 
 .page {
 	padding-top: 0 !important;
+	padding-left: 0.8rem !important;
+	padding-right: 0.8rem !important;
+}
+
+.page {
+	background-image: none;
 }
