@@ -106,56 +106,67 @@
         <div class="col-md-12 mx-auto">
 
             <!-- ===================== Spring Boot 模块 绿色标题 ===================== -->
-			<div class="module-block hidden">
+			<div class="module-block">
 				<h3 class="module-title title-spring">🍃 Spring Boot 基础模块</h3>
-				<div class="accordion" id="springAccordion">
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="springHeading1">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-									data-bs-target="#springCollapse1" aria-expanded="false" aria-controls="springCollapse1">
-								基础入门
-							</button>
-						</h2>
-						<div id="springCollapse1" class="accordion-collapse collapse" 
-							 aria-labelledby="springHeading1" data-bs-parent="#springAccordion">
-							<div class="accordion-body p-0">
-								<a href="yudao/ruoyi-vue-pro/萌新必读/简介.html" class="doc-link">项目简介</a>
-								<a href="yudao/ruoyi-vue-pro/萌新必读/快速启动（后端项目）.html" class="doc-link">后端快速启动</a>
-								<a href="yudao/ruoyi-vue-pro/萌新必读/技术选型.html" class="doc-link">技术栈选型</a>
-								<a href="yudao/ruoyi-vue-pro/萌新必读/项目结构.html" class="doc-link">目录结构说明</a>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="springHeading2">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-									data-bs-target="#springCollapse2" aria-expanded="false" aria-controls="springCollapse2">
+				<div class="accordion" id="spring-accordion">
+					<div class="accordion-item hidden">
+						<h2 class="accordion-header" id="spring-core-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-core-collapse" aria-expanded="false" aria-controls="spring-core-collapse">
 								核心配置
 							</button>
 						</h2>
-						<div id="springCollapse2" class="accordion-collapse collapse" 
-							 aria-labelledby="springHeading2" data-bs-parent="#springAccordion">
+						<div id="spring-core-collapse" class="accordion-collapse collapse" aria-labelledby="spring-core-heading" data-bs-parent="#spring-accordion">
 							<div class="accordion-body p-0">
-								<a href="yudao/ruoyi-vue-pro/后端手册/配置管理.html" class="doc-link">配置中心</a>
-								<a href="yudao/ruoyi-vue-pro/后端手册/参数校验、时间传参.html" class="doc-link">参数校验</a>
-								<a href="yudao/ruoyi-vue-pro/后端手册/异常处理（错误码）.html" class="doc-link">全局异常处理</a>
 							</div>
 						</div>
 					</div>
 					<div class="accordion-item">
-						<h2 class="accordion-header" id="springHeading3">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-									data-bs-target="#springCollapse3" aria-expanded="false" aria-controls="springCollapse3">
+						<h2 class="accordion-header" id="spring-security-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-security-collapse" aria-expanded="false" aria-controls="spring-security-collapse">
+								安全框架
+							</button>
+						</h2>
+						<div id="spring-security-collapse" class="accordion-collapse collapse" aria-labelledby="spring-security-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://sa-token.cc/doc.html" class="doc-link">Sa-Token</a>
+								<a href="https://www.justauth.cn/guide/" class="doc-link">JustAuth</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-data-cache-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-data-cache-collapse" aria-expanded="false" aria-controls="spring-data-cache-collapse">
 								数据与缓存
 							</button>
 						</h2>
-						<div id="springCollapse3" class="accordion-collapse collapse" 
-							 aria-labelledby="springHeading3" data-bs-parent="#springAccordion">
+						<div id="spring-data-cache-collapse" class="accordion-collapse collapse" aria-labelledby="spring-data-cache-heading" data-bs-parent="#spring-accordion">
 							<div class="accordion-body p-0">
-								<a href="yudao/ruoyi-vue-pro/后端手册/MyBatis 数据库.html" class="doc-link">MyBatis 使用</a>
-								<a href="yudao/ruoyi-vue-pro/后端手册/多数据源（读写分离）、事务.html" class="doc-link">多数据源&事务</a>
-								<a href="yudao/ruoyi-vue-pro/后端手册/Redis 缓存.html" class="doc-link">Redis 缓存</a>
-								<a href="yudao/ruoyi-vue-pro/后端手册/本地缓存.html" class="doc-link">本地缓存</a>
+								<a href="https://baomidou.com/introduce/" class="doc-link">MyBatis-Plus</a>
+								<a href="https://mapstruct.org/documentation/dev/reference/html/" class="doc-link">MapStruct</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-mq-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-mq-collapse" aria-expanded="false" aria-controls="spring-mq-collapse">
+								消息中间件
+							</button>
+						</h2>
+						<div id="spring-mq-collapse" class="accordion-collapse collapse" aria-labelledby="spring-mq-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://www.iocoder.cn/RabbitMQ/Detailed-understanding-of-the-basic-concepts-of-RabbitMQ/" class="doc-link">RabbitMQ 基础概念</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-utils-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-utils-collapse" aria-expanded="false" aria-controls="spring-utils-collapse">
+								拓展功能
+							</button>
+						</h2>
+						<div id="spring-utils-collapse" class="accordion-collapse collapse" aria-labelledby="spring-utils-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://doc.hutool.cn/pages/index/" class="doc-link">Hutool</a>
 							</div>
 						</div>
 					</div>
