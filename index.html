@@ -33,6 +33,7 @@
         .title-ruoyi  { background-color: #1976d2; }
         .title-yudao  { background-color: #7b1fa2; }
         .title-common { background-color: #ff8f00; }
+		.title-favorite { background-color: #ee6363; }
 
         /* 2. 二级：手风琴分类标题 样式 */
         .accordion-button {
@@ -104,10 +105,31 @@
 <main class="container">
     <div class="row">
         <div class="col-md-12 mx-auto">
-
-            <!-- ===================== Spring Boot 模块 绿色标题 ===================== -->
+		
+			
+            <!-- ===================== 网址收藏模块 ===================== -->
 			<div class="module-block">
-				<h3 class="module-title title-spring">🍃 Spring Boot 基础模块</h3>
+				<h3 class="module-title title-favorite">🏷️ 网址收藏</h3>
+				<div class="accordion" id="favorite-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="favorite-utils-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#favorite-utils-collapse" aria-expanded="false" aria-controls="favorite-utils-collapse">
+								在线工具
+							</button>
+						</h2>
+						<div id="favorite-utils-collapse" class="accordion-collapse collapse" aria-labelledby="favorite-utils-heading" data-bs-parent="#favorite-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://tool.cccyun.cc/" class="doc-link">彩虹工具网</a>
+								<a href="https://rivers.chaitin.cn/tools/home" class="doc-link">百川在线工具箱</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- ===================== Spring Boot 模块 ===================== -->
+			<div class="module-block">
+				<h3 class="module-title title-spring">🍃 Spring Boot 模块</h3>
 				<div class="accordion" id="spring-accordion">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="spring-core-heading">
@@ -208,9 +230,9 @@
 				</div>
 			</div>
 
-            <!-- ===================== 若依 RuoYi 模块 蓝色标题 ===================== -->
+            <!-- ===================== 若依 RuoYi 模块 ===================== -->
 			<div class="module-block hidden">
-				<h3 class="module-title title-ruoyi">🚀 若依 RuoYi 框架模块</h3>
+				<h3 class="module-title title-ruoyi">🚀 若依 RuoYi 模块</h3>
 				<div class="accordion" id="ruoyi-accordion">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="ruoyiHeading1">
@@ -264,9 +286,9 @@
 				</div>
 			</div>
 
-			<!-- ===================== 芋道 Yudao 模块 紫色标题 ===================== -->
+			<!-- ===================== 芋道 Yudao 模块 ===================== -->
 			<div class="module-block">
-				<h3 class="module-title title-yudao">💎 芋道 Yudao 框架模块</h3>
+				<h3 class="module-title title-yudao">💎 芋道 Yudao 模块</h3>
 				<div class="accordion" id="yudao-accordion">
 					<div class="accordion-item">
 						<h2 class="accordion-header" id="yudao-guide-heading">
