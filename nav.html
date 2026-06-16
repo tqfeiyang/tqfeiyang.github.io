@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目文档中心</title>
+    <!-- 引入 Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* 全局基础 */
+        body {
+            background-color: #f5f7fa;
+        }
+		.hidden { display: none; }
+		
+		/* 模块外框 */
+		.module-block {
+			
+		}
+
+        /* 1. 一级：模块大标题 样式+主色调 */
+        .module-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 2.2rem 0 0;
+            padding: 0.5rem 1rem;
+            border-radius: 6px 6px 0 0;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* 不同模块区分背景色 */
+        .title-spring { background-color: #2e8b57; }
+        .title-ruoyi  { background-color: #1976d2; }
+        .title-yudao  { background-color: #7b1fa2; }
+        .title-common { background-color: #ff8f00; }
+		.title-favorite { background-color: #ee6363; }
+
+        /* 2. 二级：手风琴分类标题 样式 */
+        .accordion-button {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #333;
+            background-color: #ffffff;
+        }
+        .accordion-button:not(.collapsed) {
+            color: #0d6efd;
+            background-color: #e8f4ff;
+            box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+        }
+
+        /* 3. 三级：文档链接 样式 */
+        .doc-link {
+            text-decoration: none;
+            color: #444;
+            display: block;
+            padding: 0.6rem 1rem 0.6rem 2.5rem;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease;
+        }
+        .doc-link:hover {
+            color: #0d6efd;
+            background-color: #f0f7ff;
+            border-left-color: #0d6efd;
+        }
+
+        /* 手风琴容器：取消上边距，顶部圆角置空，和标题无缝衔接 */
+        .accordion {
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            margin-top: 0 !important;
+            margin-bottom: 1.5rem !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部导航栏 -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="#">📖 项目文档中心</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">在线教程</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">更新日志</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">联系我们</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 主体内容区 -->
+<main class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto">
+		
+			
+            <!-- ===================== 网址收藏模块 ===================== -->
+			<div class="module-block">
+				<h3 class="module-title title-favorite">🏷️ 网址收藏</h3>
+				<div class="accordion" id="favorite-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="favorite-utils-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#favorite-utils-collapse" aria-expanded="false" aria-controls="favorite-utils-collapse">
+								在线工具
+							</button>
+						</h2>
+						<div id="favorite-utils-collapse" class="accordion-collapse collapse" aria-labelledby="favorite-utils-heading" data-bs-parent="#favorite-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://tool.cccyun.cc/" class="doc-link">彩虹工具网</a>
+								<a href="https://rivers.chaitin.cn/tools/home" class="doc-link">百川在线工具箱</a>
+								<a href="https://tools.jb51.net/" class="doc-link">脚本之家在线工具</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- ===================== Spring Boot 模块 ===================== -->
+			<div class="module-block">
+				<h3 class="module-title title-spring">🍃 Spring Boot 模块</h3>
+				<div class="accordion" id="spring-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-core-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-core-collapse" aria-expanded="false" aria-controls="spring-core-collapse">
+								核心配置
+							</button>
+						</h2>
+						<div id="spring-core-collapse" class="accordion-collapse collapse" aria-labelledby="spring-core-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="spring/attachments/Spring Boot  多环境配置管理 超详细详解.pdf" class="doc-link">多环境配置</a>
+								<a href="spring/attachments/Spring Boot 三种热加载方案.pdf" class="doc-link">三种热加载方案</a>
+								<a href="spring/attachments/Spring Boot 扩展点全攻略.pdf" class="doc-link">扩展点全攻略</a>
+								<a href="spring/attachments/Spring Boot 服务监控机制.pdf" class="doc-link">服务监控机制</a>
+								<a href="spring/attachments/Spring Boot 服务配置通用脚本.pdf" class="doc-link">服务配置通用脚本</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-standard-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-standard-collapse" aria-expanded="false" aria-controls="spring-standard-collapse">
+								开发规范
+							</button>
+						</h2>
+						<div id="spring-standard-collapse" class="accordion-collapse collapse" aria-labelledby="spring-standard-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="spring/attachments/Spring Boot 企业级开发四大统一规范.pdf" class="doc-link">企业级开发四大统一规范</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-api-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-api-collapse" aria-expanded="false" aria-controls="spring-api-collapse">
+								API接口
+							</button>
+						</h2>
+						<div id="spring-api-collapse" class="accordion-collapse collapse" aria-labelledby="spring-api-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="spring/attachments/RESTful API 设计规范.pdf" class="doc-link">RESTful API 设计规范</a>
+								<a href="spring/attachments/Spring Boot 获取真实客户端IP.pdf" class="doc-link">获取真实客户端IP</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-security-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-security-collapse" aria-expanded="false" aria-controls="spring-security-collapse">
+								安全框架
+							</button>
+						</h2>
+						<div id="spring-security-collapse" class="accordion-collapse collapse" aria-labelledby="spring-security-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://sa-token.cc/doc.html" class="doc-link">Sa-Token</a>
+								<a href="https://www.justauth.cn/guide/" class="doc-link">JustAuth</a>
+								<a href="http://www.ruanyifeng.com/blog/2019/04/oauth_design.html" class="doc-link">OAuth 2.0 的简单解释</a>
+								<a href="http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html" class="doc-link">OAuth 2.0 的四种方式</a>
+								<a href="http://www.ruanyifeng.com/blog/2019/04/github-oauth.html" class="doc-link">GitHub OAuth 第三方登录示例教程</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-data-cache-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-data-cache-collapse" aria-expanded="false" aria-controls="spring-data-cache-collapse">
+								数据与缓存
+							</button>
+						</h2>
+						<div id="spring-data-cache-collapse" class="accordion-collapse collapse" aria-labelledby="spring-data-cache-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://baomidou.com/introduce/" class="doc-link">MyBatis-Plus</a>
+								<a href="https://mapstruct.org/documentation/dev/reference/html/" class="doc-link">MapStruct</a>
+								<a href="spring/attachments/Spring Boot with H2 Database (In-Memory Database).pdf" class="doc-link">H2 Database (In-Memory Database)</a>
+								<a href="spring/attachments/MyBatis-Plus 深度开发规范手册.pdf" class="doc-link">MyBatis-Plus 开发规范手册</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-mq-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-mq-collapse" aria-expanded="false" aria-controls="spring-mq-collapse">
+								消息中间件
+							</button>
+						</h2>
+						<div id="spring-mq-collapse" class="accordion-collapse collapse" aria-labelledby="spring-mq-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://www.iocoder.cn/RabbitMQ/Detailed-understanding-of-the-basic-concepts-of-RabbitMQ/" class="doc-link">RabbitMQ 基础概念</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="spring-utils-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#spring-utils-collapse" aria-expanded="false" aria-controls="spring-utils-collapse">
+								拓展功能
+							</button>
+						</h2>
+						<div id="spring-utils-collapse" class="accordion-collapse collapse" aria-labelledby="spring-utils-heading" data-bs-parent="#spring-accordion">
+							<div class="accordion-body p-0">
+								<a href="https://doc.hutool.cn/pages/index/" class="doc-link">Hutool</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- ===================== 若依 RuoYi 模块 ===================== -->
+			<div class="module-block hidden">
+				<h3 class="module-title title-ruoyi">🚀 若依 RuoYi 模块</h3>
+				<div class="accordion" id="ruoyi-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="ruoyiHeading1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+									data-bs-target="#ruoyiCollapse1" aria-expanded="false" aria-controls="ruoyiCollapse1">
+								权限体系
+							</button>
+						</h2>
+						<div id="ruoyiCollapse1" class="accordion-collapse collapse" 
+							 aria-labelledby="ruoyiHeading1" data-bs-parent="#ruoyi-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/后端手册/功能权限.html" class="doc-link">功能权限</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/数据权限.html" class="doc-link">数据权限</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/用户体系.html" class="doc-link">用户体系</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="ruoyiHeading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+									data-bs-target="#ruoyiCollapse2" aria-expanded="false" aria-controls="ruoyiCollapse2">
+								代码生成
+							</button>
+						</h2>
+						<div id="ruoyiCollapse2" class="accordion-collapse collapse" 
+							 aria-labelledby="ruoyiHeading2" data-bs-parent="#ruoyi-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成【单表】（新增功能）.html" class="doc-link">单表代码生成</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成【主子表】.html" class="doc-link">主子表代码生成</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成（树表）.html" class="doc-link">树表代码生成</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="ruoyiHeading3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+									data-bs-target="#ruoyiCollapse3" aria-expanded="false" aria-controls="ruoyiCollapse3">
+								拓展功能
+							</button>
+						</h2>
+						<div id="ruoyiCollapse3" class="accordion-collapse collapse" 
+							 aria-labelledby="ruoyiHeading3" data-bs-parent="#ruoyi-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/后端手册/Excel 导入导出.html" class="doc-link">Excel 导入导出</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/文件存储（上传下载）.html" class="doc-link">文件上传下载</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/操作日志、访问日志、异常日志.html" class="doc-link">日志管理</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/验证码.html" class="doc-link">验证码</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- ===================== 芋道 Yudao 模块 ===================== -->
+			<div class="module-block">
+				<h3 class="module-title title-yudao">💎 芋道 Yudao 模块</h3>
+				<div class="accordion" id="yudao-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse" aria-expanded="false" aria-controls="yudao-guide-collapse">
+								萌新必读
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/萌新必读/简介.html" class="doc-link">简介</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/交流群.html" class="doc-link">交流群</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/视频教程.html" class="doc-link">视频教程</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/功能列表.html" class="doc-link">功能列表</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/快速启动（后端项目）.html" class="doc-link">快速启动（后端项目）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/快速启动（前端项目）.html" class="doc-link">快速启动（前端项目）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/接口文档.html" class="doc-link">接口文档</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/技术选型.html" class="doc-link">技术选型</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/项目结构.html" class="doc-link">项目结构</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/代码热加载.html" class="doc-link">代码热加载</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/一键改包.html" class="doc-link">一键改包</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/迁移模块（适合新项目）.html" class="doc-link">迁移模块（适合新项目）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/删除功能（以租户为例）.html" class="doc-link">删除功能（以租户为例）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/表结构变更（版本升级）.html" class="doc-link">表结构变更（版本升级）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/国产信创数据库（DM 达梦、大金、OpenGauss）.html" class="doc-link">国产信创数据库（DM 达梦、大金、OpenGauss）</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/如何去除 Redis 缓存.html" class="doc-link">如何去除 Redis 缓存</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/内网穿透.html" class="doc-link">内网穿透</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/面试题、简历模版、简历优化.html" class="doc-link">面试题、简历模版、简历优化</a>
+								<a href="yudao/ruoyi-vue-pro/萌新必读/项目外包.html" class="doc-link">项目外包</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse2" aria-expanded="false" aria-controls="yudaoCollapse2">
+								后端手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse2" class="accordion-collapse collapse" aria-labelledby="yudaoHeading2" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/后端手册/新建模块.html" class="doc-link">新建模块</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成【单表】（新增功能）.html" class="doc-link">代码生成【单表】（新增功能）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成【主子表】.html" class="doc-link">代码生成【主子表】</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成（树表）.html" class="doc-link">代码生成（树表）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/代码生成（移动端）.html" class="doc-link">代码生成（移动端）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/功能权限.html" class="doc-link">功能权限</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/数据权限.html" class="doc-link">数据权限</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/用户体系.html" class="doc-link">用户体系</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/三方登录.html" class="doc-link">三方登录</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/OAuth 2.0（SSO 单点登录).html" class="doc-link">OAuth 2.0（SSO 单点登录)</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/SaaS 多租户【字段隔离】.html" class="doc-link">SaaS 多租户【字段隔离】</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/SaaS 多租户【数据库隔离】.html" class="doc-link">SaaS 多租户【数据库隔离】</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/WebSocket 实时通信.html" class="doc-link">WebSocket 实时通信</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/异常处理（错误码）.html" class="doc-link">异常处理（错误码）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/参数校验、时间传参.html" class="doc-link">参数校验、时间传参</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/分页实现.html" class="doc-link">分页实现</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/VO 对象转换、数据翻译.html" class="doc-link">VO 对象转换、数据翻译</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/文件存储（上传下载）.html" class="doc-link">文件存储（上传下载）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/Excel 导入导出.html" class="doc-link">Excel 导入导出</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/操作日志、访问日志、异常日志.html" class="doc-link">操作日志、访问日志、异常日志</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/MyBatis 数据库.html" class="doc-link">MyBatis 数据库</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/MyBatis 联表&amp;分页查询.html" class="doc-link">MyBatis 联表&amp;分页查询</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/多数据源（读写分离）、事务.html" class="doc-link">多数据源（读写分离）、事务</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/Redis 缓存.html" class="doc-link">Redis 缓存</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/本地缓存.html" class="doc-link">本地缓存</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/异步任务.html" class="doc-link">异步任务</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/分布式锁.html" class="doc-link">分布式锁</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/幂等性（防重复提交）.html" class="doc-link">幂等性（防重复提交）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/请求限流（RateLimiter）.html" class="doc-link">请求限流（RateLimiter）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/HTTP 接口签名（防篡改）.html" class="doc-link">HTTP 接口签名（防篡改）</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/HTTP 接口加解密.html" class="doc-link">HTTP 接口加解密</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/单元测试.html" class="doc-link">单元测试</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/验证码.html" class="doc-link">验证码</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/工具类 Util.html" class="doc-link">工具类 Util</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/配置管理.html" class="doc-link">配置管理</a>
+								<a href="yudao/ruoyi-vue-pro/后端手册/数据库文档.html" class="doc-link">数据库文档</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse3" aria-expanded="false" aria-controls="yudaoCollapse3">
+								中间件手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse3" class="accordion-collapse collapse" aria-labelledby="yudaoHeading3" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/中间件手册/定时任务.html" class="doc-link">定时任务</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/消息队列（内存）.html" class="doc-link">消息队列（内存）</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/消息队列（Redis）.html" class="doc-link">消息队列（Redis）</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/消息队列（RocketMQ）.html" class="doc-link">消息队列（RocketMQ）</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/消息队列（RabbitMQ）.html" class="doc-link">消息队列（RabbitMQ）</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/消息队列（Kafka）.html" class="doc-link">消息队列（Kafka）</a>
+								<a href="yudao/ruoyi-vue-pro/中间件手册/限流熔断.html" class="doc-link">限流熔断</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse4" aria-expanded="false" aria-controls="yudaoCollapse4">
+								工作流手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse4" class="accordion-collapse collapse" aria-labelledby="yudaoHeading4" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/工作流手册/工作流演示.html" class="doc-link">工作流演示</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/工作流（达梦适配）.html" class="doc-link">工作流（达梦适配）</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/审批接入（流程表单）.html" class="doc-link">审批接入（流程表单）</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/审批接入（业务表单）.html" class="doc-link">审批接入（业务表单）</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/流程设计器（BPMN）.html" class="doc-link">流程设计器（BPMN）</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/流程设计器（钉钉、飞书）.html" class="doc-link">流程设计器（钉钉、飞书）</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/选择审批人、发起人自选.html" class="doc-link">选择审批人、发起人自选</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/会签、或签、依次审批.html" class="doc-link">会签、或签、依次审批</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/流程发起、取消、重新发起.html" class="doc-link">流程发起、取消、重新发起</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/审批通过、不通过、驳回.html" class="doc-link">审批通过、不通过、驳回</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/审批加签、减签.html" class="doc-link">审批加签、减签</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/审批转办、委派、抄送.html" class="doc-link">审批转办、委派、抄送</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/执行监听器、任务监听器.html" class="doc-link">执行监听器、任务监听器</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/流程表达式.html" class="doc-link">流程表达式</a>
+								<a href="yudao/ruoyi-vue-pro/工作流手册/流程审批通知.html" class="doc-link">流程审批通知</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse5" aria-expanded="false" aria-controls="yudaoCollapse5">
+								大屏手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse5" class="accordion-collapse collapse" aria-labelledby="yudaoHeading5" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/大屏手册/报表设计器.html" class="doc-link">报表设计器</a>
+								<a href="yudao/ruoyi-vue-pro/大屏手册/大屏设计器.html" class="doc-link">大屏设计器</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading6">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse6" aria-expanded="false" aria-controls="yudaoCollapse6">
+								支付手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse6" class="accordion-collapse collapse" aria-labelledby="yudaoHeading6" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/支付手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/支付宝支付接入.html" class="doc-link">支付宝支付接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/微信公众号支付接入.html" class="doc-link">微信公众号支付接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/微信小程序支付接入.html" class="doc-link">微信小程序支付接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/支付宝、微信退款接入.html" class="doc-link">支付宝、微信退款接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/支付宝转账接入.html" class="doc-link">支付宝转账接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/微信转账接入.html" class="doc-link">微信转账接入</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/钱包充值、支付、退款.html" class="doc-link">钱包充值、支付、退款</a>
+								<a href="yudao/ruoyi-vue-pro/支付手册/模拟支付、退款.html" class="doc-link">模拟支付、退款</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading7">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse7" aria-expanded="false" aria-controls="yudaoCollapse7">
+								会员手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse7" class="accordion-collapse collapse" aria-labelledby="yudaoHeading7" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/会员手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/微信公众号登录.html" class="doc-link">微信公众号登录</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/微信小程序登录.html" class="doc-link">微信小程序登录</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/微信小程序订阅消息.html" class="doc-link">微信小程序订阅消息</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/微信小程序码.html" class="doc-link">微信小程序码</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/会员用户、标签、分组.html" class="doc-link">会员用户、标签、分组</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/会员等级、积分、签到.html" class="doc-link">会员等级、积分、签到</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading8">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse8" aria-expanded="false" aria-controls="yudaoCollapse8">
+								商城手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse8" class="accordion-collapse collapse" aria-labelledby="yudaoHeading8" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/商城手册/商城演示.html" class="doc-link">商城演示</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/商城装修.html" class="doc-link">商城装修</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/在线客服.html" class="doc-link">在线客服</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【商品】商品分类.html" class="doc-link">【商品】商品分类</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【商品】商品属性.html" class="doc-link">【商品】商品属性</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【商品】商品 SPU 与 SKU.html" class="doc-link">【商品】商品 SPU 与 SKU</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【商品】商品评价.html" class="doc-link">【商品】商品评价</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】购物车.html" class="doc-link">【交易】购物车</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】交易订单.html" class="doc-link">【交易】交易订单</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】售后退款.html" class="doc-link">【交易】售后退款</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】快递发货.html" class="doc-link">【交易】快递发货</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】门店自提.html" class="doc-link">【交易】门店自提</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【交易】分销返佣.html" class="doc-link">【交易】分销返佣</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】优惠劵.html" class="doc-link">【营销】优惠劵</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】积分商城.html" class="doc-link">【营销】积分商城</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】拼团活动.html" class="doc-link">【营销】拼团活动</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】秒杀活动.html" class="doc-link">【营销】秒杀活动</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】砍价活动.html" class="doc-link">【营销】砍价活动</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】满减送活动.html" class="doc-link">【营销】满减送活动</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】限时折扣.html" class="doc-link">【营销】限时折扣</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【营销】内容管理.html" class="doc-link">【营销】内容管理</a>
+								<a href="yudao/ruoyi-vue-pro/商城手册/【统计】会员、商品、交易统计.html" class="doc-link">【统计】会员、商品、交易统计</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading9">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse9" aria-expanded="false" aria-controls="yudaoCollapse9">
+								ERP手册
+							</button>
+						</h2>
+						<div id="yudaoCollapse9" class="accordion-collapse collapse" aria-labelledby="yudaoHeading9" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/ERP手册/ERP 演示.html" class="doc-link">ERP 演示</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/yudao-module-erp.html" class="doc-link">数据库设计</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【产品】产品信息、分类、单位.html" class="doc-link">【产品】产品信息、分类、单位</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【库存】产品库存、库存明细.html" class="doc-link">【库存】产品库存、库存明细</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【库存】其它入库、其它出库.html" class="doc-link">【库存】其它入库、其它出库</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【库存】库存调拨、库存盘点.html" class="doc-link">【库存】库存调拨、库存盘点</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【采购】采购订单、入库、退货.html" class="doc-link">【采购】采购订单、入库、退货</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【销售】销售订单、出库、退货.html" class="doc-link">【销售】销售订单、出库、退货</a>
+								<a href="yudao/ruoyi-vue-pro/ERP手册/【财务】采购付款、销售收款.html" class="doc-link">【财务】采购付款、销售收款</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading0">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse0" aria-expanded="false" aria-controls="yudao-guide-collapse0">
+								CRM手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse0" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading0" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/CRM手册/CRM 演示.html" class="doc-link">CRM 演示</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【线索】线索管理.html" class="doc-link">【线索】线索管理</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【客户】客户管理、公海客户.html" class="doc-link">【客户】客户管理、公海客户</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【商机】商机管理、商机状态.html" class="doc-link">【商机】商机管理、商机状态</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【合同】合同管理、合同提醒.html" class="doc-link">【合同】合同管理、合同提醒</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【回款】回款管理、回款计划.html" class="doc-link">【回款】回款管理、回款计划</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【产品】产品管理、产品分类.html" class="doc-link">【产品】产品管理、产品分类</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【通用】数据权限.html" class="doc-link">【通用】数据权限</a>
+								<a href="yudao/ruoyi-vue-pro/CRM手册/【通用】跟进记录、待办事项.html" class="doc-link">【通用】跟进记录、待办事项</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse1" aria-expanded="false" aria-controls="yudao-guide-collapse1">
+								AI大模型手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse1" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading1" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 大模型演示.html" class="doc-link">AI 大模型演示</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 聊天对话.html" class="doc-link">AI 聊天对话</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 绘画创作.html" class="doc-link">AI 绘画创作</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 知识库（RAG）.html" class="doc-link">AI 知识库（RAG）</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 音乐创作.html" class="doc-link">AI 音乐创作</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 写作助手.html" class="doc-link">AI 写作助手</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 思维导图.html" class="doc-link">AI 思维导图</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 工具（function calling）.html" class="doc-link">AI 工具（function calling）</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/AI 工作流.html" class="doc-link">AI 工作流</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/Dify 工作流.html" class="doc-link">Dify 工作流</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/FastGPT 工作流.html" class="doc-link">FastGPT 工作流</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/Coze 智能体.html" class="doc-link">Coze 智能体</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/推理模式（thinking）.html" class="doc-link">推理模式（thinking）</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/联网搜索.html" class="doc-link">联网搜索</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/MCP Client 客户端.html" class="doc-link">MCP Client 客户端</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/MCP Server 服务端.html" class="doc-link">MCP Server 服务端</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】Claude.html" class="doc-link">【模型接入】Claude</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】OpenAI.html" class="doc-link">【模型接入】OpenAI</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】通义千问.html" class="doc-link">【模型接入】通义千问</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】DeepSeek.html" class="doc-link">【模型接入】DeepSeek</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】字节豆包.html" class="doc-link">【模型接入】字节豆包</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】腾讯混元.html" class="doc-link">【模型接入】腾讯混元</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】硅基流动.html" class="doc-link">【模型接入】硅基流动</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】MiniMax.html" class="doc-link">【模型接入】MiniMax</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】月之月面.html" class="doc-link">【模型接入】月之月面</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】百川智能.html" class="doc-link">【模型接入】百川智能</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】文心一言.html" class="doc-link">【模型接入】文心一言</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】LLAMA.html" class="doc-link">【模型接入】LLAMA</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】智谱 GLM.html" class="doc-link">【模型接入】智谱 GLM</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】讯飞星火.html" class="doc-link">【模型接入】讯飞星火</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】微软 OpenAI.html" class="doc-link">【模型接入】微软 OpenAI</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】谷歌 Gemini.html" class="doc-link">【模型接入】谷歌 Gemini</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】Stable Diffusion.html" class="doc-link">【模型接入】Stable Diffusion</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】Midjourney.html" class="doc-link">【模型接入】Midjourney</a>
+								<a href="yudao/ruoyi-vue-pro/AI大模型手册/【模型接入】Suno.html" class="doc-link">【模型接入】Suno</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse2" aria-expanded="false" aria-controls="yudao-guide-collapse2">
+								IoT物联网手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse2" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading2" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/产品管理.html" class="doc-link">产品管理</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备管理.html" class="doc-link">设备管理</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/物模型配置.html" class="doc-link">物模型配置</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备网关与子设备.html" class="doc-link">设备网关与子设备</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备动态注册.html" class="doc-link">设备动态注册</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（概述）.html" class="doc-link">设备接入（概述）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（HTTP 协议）.html" class="doc-link">设备接入（HTTP 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（MQTT 协议）.html" class="doc-link">设备接入（MQTT 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（EMQX 协议）.html" class="doc-link">设备接入（EMQX 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（TCP 协议）.html" class="doc-link">设备接入（TCP 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（UDP 协议）.html" class="doc-link">设备接入（UDP 协议）
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（WebSocket 协议）.html" class="doc-link">设备接入（WebSocket 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（CoAP 协议）.html" class="doc-link">设备接入（CoAP 协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（Modbus Client 模式）.html" class="doc-link">设备接入（Modbus Client 模式）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（Modbus Server 模式）.html" class="doc-link">设备接入（Modbus Server 模式）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/设备接入（自定义协议）.html" class="doc-link">设备接入（自定义协议）</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/场景联动.html" class="doc-link">场景联动</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/数据流转.html" class="doc-link">数据流转</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/告警配置.html" class="doc-link">告警配置</a>
+								<a href="yudao/ruoyi-vue-pro/IoT物联网手册/OTA 固件升级.html" class="doc-link">OTA 固件升级</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading3">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse3" aria-expanded="false" aria-controls="yudao-guide-collapse3">
+								MES手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse3" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading3" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/MES手册/MES 演示.html" class="doc-link">MES 演示</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【基础】物料产品、分类、计量单位.html" class="doc-link">【基础】物料产品、分类、计量单位</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【基础】客户管理、供应商管理.html" class="doc-link">【基础】客户管理、供应商管理</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【基础】车间设置、工作站设置.html" class="doc-link">【基础】车间设置、工作站设置</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【基础】编码规则.html" class="doc-link">【基础】编码规则</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】工序设置、工艺流程.html" class="doc-link">【生产】工序设置、工艺流程</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】生产工单.html" class="doc-link">【生产】生产工单</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】生产排产、工序流转卡.html" class="doc-link">【生产】生产排产、工序流转卡</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】生产报工.html" class="doc-link">【生产】生产报工</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】安灯配置、安灯呼叫.html" class="doc-link">【生产】安灯配置、安灯呼叫</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【生产】工作记录.html" class="doc-link">【生产】工作记录</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】仓库与库区库位、条码赋码、SN码.html" class="doc-link">【仓库】仓库与库区库位、条码赋码、SN码</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】批次管理、库存现有量、库存事务.html" class="doc-link">【仓库】批次管理、库存现有量、库存事务</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】到货通知、采购入库、采购退货.html" class="doc-link">【仓库】到货通知、采购入库、采购退货</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】生产领料、生产退料、物料消耗.html" class="doc-link">【仓库】生产领料、生产退料、物料消耗</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】产品产出、产品入库.html" class="doc-link">【仓库】产品产出、产品入库</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】发货通知、销售出库、销售退货.html" class="doc-link">【仓库】发货通知、销售出库、销售退货</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】外协发料、外协入库.html" class="doc-link">【仓库】外协发料、外协入库</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】其他入库、其他出库.html" class="doc-link">【仓库】其他入库、其他出库</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】调拨单、装箱管理.html" class="doc-link">【仓库】调拨单、装箱管理</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【仓库】库存盘点.html" class="doc-link">【仓库】库存盘点</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】检测项设置、常见缺陷.html" class="doc-link">【质量】检测项设置、常见缺陷</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】质检方案.html" class="doc-link">【质量】质检方案</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】来料检验（IQC）.html" class="doc-link">【质量】来料检验（IQC）</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】过程检验（IPQC）.html" class="doc-link">【质量】过程检验（IPQC）</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】出货检验（OQC）.html" class="doc-link">【质量】出货检验（OQC）</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】退货检验（RQC）.html" class="doc-link">【质量】退货检验（RQC）</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【质量】待检任务、检验结果、缺陷记录.html" class="doc-link">【质量】待检任务、检验结果、缺陷记录</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【设备】设备类型、设备台账.html" class="doc-link">【设备】设备类型、设备台账</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【设备】点检保养项目、点检保养方案.html" class="doc-link">【设备】点检保养项目、点检保养方案</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【设备】点检记录、保养记录、维修单.html" class="doc-link">【设备】点检记录、保养记录、维修单</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【工具】工具类型、工装夹具台账.html" class="doc-link">【工具】工具类型、工装夹具台账</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【排班】班组设置、节假日设置.html" class="doc-link">【排班】班组设置、节假日设置</a>
+								<a href="yudao/ruoyi-vue-pro/MES手册/【排班】排班计划、排班日历.html" class="doc-link">【排班】排班计划、排班日历</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading4">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse4" aria-expanded="false" aria-controls="yudao-guide-collapse4">
+								WMS手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse4" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading4" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/WMS手册/WMS 演示.html" class="doc-link">WMS 演示</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【基础】仓库.html" class="doc-link">【基础】仓库</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【基础】商品、SKU、分类、品牌.html" class="doc-link">【基础】商品、SKU、分类、品牌</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【基础】往来企业（供应商、客户）.html" class="doc-link">【基础】往来企业（供应商、客户）</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【库存】库存记录、流水、统计.html" class="doc-link">【库存】库存记录、流水、统计</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【单据】入库.html" class="doc-link">【单据】入库</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【单据】出库.html" class="doc-link">【单据】出库</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【单据】移库.html" class="doc-link">【单据】移库</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【单据】盘库.html" class="doc-link">【单据】盘库</a>
+								<a href="yudao/ruoyi-vue-pro/WMS手册/【其它】WMS、MES、ERP 对比.html" class="doc-link">【其它】WMS、MES、ERP 对比</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading5">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse5" aria-expanded="false" aria-controls="yudao-guide-collapse5">
+								IM即时通讯手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse5" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading5" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/IM即时通讯手册/IM 演示.html" class="doc-link">IM 演示</a>
+								<a href="yudao/ruoyi-vue-pro/IM即时通讯手册/功能开启.html" class="doc-link">功能开启</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading6">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse6" aria-expanded="false" aria-controls="yudao-guide-collapse6">
+								公众号手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse6" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading6" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/公众号手册/功能开启.html" class="doc-link">功能开启</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号接入.html" class="doc-link">公众号接入</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号粉丝.html" class="doc-link">公众号粉丝</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号标签.html" class="doc-link">公众号标签</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号消息.html" class="doc-link">公众号消息</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/模版消息.html" class="doc-link">模版消息</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/自动回复.html" class="doc-link">自动回复</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号菜单.html" class="doc-link">公众号菜单</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号素材.html" class="doc-link">公众号素材</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号图文.html" class="doc-link">公众号图文</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/公众号统计.html" class="doc-link">公众号统计</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading7">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse7" aria-expanded="false" aria-controls="yudao-guide-collapse7">
+								系统手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse7" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading7" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/系统手册/短信配置.html" class="doc-link">短信配置</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/邮件配置.html" class="doc-link">邮件配置</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/站内信配置.html" class="doc-link">站内信配置</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/Webhook（钉钉、飞书、企微）.html" class="doc-link">Webhook（钉钉、飞书、企微）</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/数据脱敏、字段权限.html" class="doc-link">数据脱敏、字段权限</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/敏感词.html" class="doc-link">敏感词</a>
+								<a href="yudao/ruoyi-vue-pro/系统手册/地区 &amp; IP 库.html" class="doc-link">地区 &amp; IP 库</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading8">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse8" aria-expanded="false" aria-controls="yudao-guide-collapse8">
+								运维手册
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse8" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading8" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/运维手册/开发环境.html" class="doc-link">开发环境</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/Linux 部署.html" class="doc-link">Linux 部署</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/Docker 部署.html" class="doc-link">Docker 部署</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/Jenkins 部署.html" class="doc-link">Jenkins 部署</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/宝塔部署.html" class="doc-link">宝塔部署</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/1Panel 部署.html" class="doc-link">1Panel 部署</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/HTTPS 证书.html" class="doc-link">HTTPS 证书</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/服务监控.html" class="doc-link">服务监控</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/Tomcat WAR 部署.html" class="doc-link">Tomcat WAR 部署</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudao-guide-heading9">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudao-guide-collapse9" aria-expanded="false" aria-controls="yudao-guide-collapse9">
+								前端手册 Vue 3.x
+							</button>
+						</h2>
+						<div id="yudao-guide-collapse9" class="accordion-collapse collapse" aria-labelledby="yudao-guide-heading9" data-bs-parent="#yudao-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/开发规范.html" class="doc-link">开发规范</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/菜单路由.html" class="doc-link">菜单路由</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/Icon 图标.html" class="doc-link">Icon 图标</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/字典数据.html" class="doc-link">字典数据</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/系统组件.html" class="doc-link">系统组件</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/通用方法.html" class="doc-link">通用方法</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/配置读取.html" class="doc-link">配置读取</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/CRUD 组件.html" class="doc-link">CRUD 组件</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/国际化.html" class="doc-link">国际化</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/IDE 调试.html" class="doc-link">IDE 调试</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/代码格式化.html" class="doc-link">代码格式化</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading20">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse20" aria-expanded="false" aria-controls="yudaoCollapse20">
+								前端手册 Vben 5.x
+							</button>
+						</h2>
+						<div id="yudaoCollapse20" class="accordion-collapse collapse" aria-labelledby="yudaoHeading20" data-bs-parent="#collapseVben">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/开发规范.html" class="doc-link">开发规范</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/菜单路由.html" class="doc-link">菜单路由</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/图标、主题、国际化.html" class="doc-link">图标、主题、国际化</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/字典数据.html" class="doc-link">字典数据</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/系统组件.html" class="doc-link">系统组件</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/通用方法.html" class="doc-link">通用方法</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/配置读取.html" class="doc-link">配置读取</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/IDE 调试.html" class="doc-link">IDE 调试.</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/代码格式化.html" class="doc-link">代码格式化</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading21">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse21" aria-expanded="false" aria-controls="yudaoCollapse21">
+								前端手册 Vue 2.x
+							</button>
+						</h2>
+						<div id="yudaoCollapse21" class="accordion-collapse collapse" aria-labelledby="yudaoHeading21" data-bs-parent="#vue2Accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/开发规范.html" class="doc-link">开发规范</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/菜单路由.html" class="doc-link">菜单路由</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/Icon 图标.html" class="doc-link">Icon 图标</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/字典数据.html" class="doc-link">字典数据</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/系统组件.html" class="doc-link">系统组件</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/通用方法.html" class="doc-link">通用方法</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/配置读取.html" class="doc-link">配置读取</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="yudaoHeading22">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#yudaoCollapse22" aria-expanded="false" aria-controls="yudaoCollapse22">
+								前端手册 Admin Uniapp
+							</button>
+						</h2>
+						<div id="yudaoCollapse22" class="accordion-collapse collapse" aria-labelledby="yudaoHeading22" data-bs-parent="#uniappAccordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/开发规范.html" class="doc-link">开发规范</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/菜单路由.html" class="doc-link">菜单路由</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/图标、主题、国际化.html" class="doc-link">图标、主题、国际化</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/字典数据.html" class="doc-link">字典数据</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/系统组件.html" class="doc-link">系统组件</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/通用方法.html" class="doc-link">通用方法</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/IDE 调试.html" class="doc-link">IDE 调试</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/代码格式化.html" class="doc-link">代码格式化</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/运行发布.html" class="doc-link">运行发布</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+            <!-- ===================== 通用文档 & 运维 橙色标题 ===================== -->
+			<div class="module-block hidden">
+				<h3 class="module-title title-common">📋 通用文档 & 运维</h3>
+				<div class="accordion" id="common-accordion">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="commonHeading1">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+									data-bs-target="#commonCollapse1" aria-expanded="false" aria-controls="commonCollapse1">
+								前端相关
+							</button>
+						</h2>
+						<div id="commonCollapse1" class="accordion-collapse collapse" 
+							 aria-labelledby="commonHeading1" data-bs-parent="#common-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 3.x/开发规范.html" class="doc-link">Vue3 手册</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vue 2.x/开发规范.html" class="doc-link">Vue2 手册</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Vben 5.x/开发规范.html" class="doc-link">Vben5 手册</a>
+								<a href="yudao/ruoyi-vue-pro/前端手册 Admin Uniapp/开发规范.html" class="doc-link">Uniapp 手册</a>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="commonHeading2">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
+									data-bs-target="#commonCollapse2" aria-expanded="false" aria-controls="commonCollapse2">
+								系统 & 运维
+							</button>
+						</h2>
+						<div id="commonCollapse2" class="accordion-collapse collapse" 
+							 aria-labelledby="commonHeading2" data-bs-parent="#common-accordion">
+							<div class="accordion-body p-0">
+								<a href="yudao/ruoyi-vue-pro/系统手册/短信配置.html" class="doc-link">系统配置</a>
+								<a href="yudao/ruoyi-vue-pro/公众号手册/功能开启.html" class="doc-link">公众号手册</a>
+								<a href="yudao/ruoyi-vue-pro/会员手册/功能开启.html" class="doc-link">会员手册</a>
+								<a href="yudao/ruoyi-vue-pro/运维手册/Linux 部署.html" class="doc-link">部署运维</a>
+								<a href="yudao/ruoyi-vue-pro/更新日志/【v2026-05】.html" class="doc-link">版本更新日志</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+        </div>
+    </div>
+</main>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
