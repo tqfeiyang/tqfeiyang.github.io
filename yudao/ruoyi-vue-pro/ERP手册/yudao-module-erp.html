@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>yudao-module-erp</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+        html , body {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          padding: 10px;
+        }
+        .left {
+            display: inline-block;
+            width: 25%;
+            height: 100%;
+            overflow: auto;
+            border-right: 1px solid #DFE3EB;
+            padding: 10px
+        }
+        .right {
+            display: inline-block;
+            width: 75%;
+            height: 100%;
+            padding: 10px;
+            overflow: auto;
+        }
+        .index {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        li {
+            list-style: none;
+            padding: 5px;
+        }
+        .first-li {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .second-li {
+            font-weight: bold;
+        }
+        .third-li {
+            font-weight: normal;
+        }
+        .block {
+            display: block;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-color: #E8E8E8;
+        }
+        .first-tr {
+            text-align: center;
+        }
+        tr:hover {
+            background: #ECF9FF;
+        }
+        td {
+            font-weight: normal;
+            padding: 5px;
+            white-space: nowrap;
+        }
+        a {
+            color: #000000;
+            background-color: transparent;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .group {
+            color: green;
+        }
+        .group-list {
+            color: #1890ff;
+        }
+    </style>
+</head>
+<body><span class="left"><center class="index">目录</center>
+<hr><ul>
+<li class="first-li"><a class="group" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-to">1 产品管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-diagrams-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-column-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-column-from" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-to">2 库存管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-diagrams-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-column-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-column-from" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-to">3 财务管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-diagrams-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-column-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-column-from" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-to">4 采购管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-diagrams-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-column-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-column-from" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-to">5 销售管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-diagrams-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-views-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-views-column-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-column-from" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-__defaultGroup-from" href="#group-__defaultGroup-to">6 默认主题域</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-diagrams-from" href="#group-__defaultGroup-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-entities-from" href="#group-__defaultGroup-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-entities-column-from" href="#group-__defaultGroup-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-views-from" href="#group-__defaultGroup-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-views-column-from" href="#group-__defaultGroup-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-dicts-from" href="#group-__defaultGroup-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-dicts-column-from" href="#group-__defaultGroup-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul></ul>
+</span><span  class="right"><ul>
+
+<li class="first-li"><a class="group" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-from">1 产品管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-diagrams-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-diagrams-from">1.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-from">1.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>ERP 产品表</td><td>erp_product</td><td></td></tr>
+<tr><td>ERP 产品分类</td><td>erp_product_category</td><td></td></tr>
+<tr><td>ERP 产品单位表</td><td>erp_product_unit</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-from">1.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-82457436-8714-4B7B-A8C5-892F09AE1CC9-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-82457436-8714-4B7B-A8C5-892F09AE1CC9-from">1.2.2.1 erp_product[ERP 产品表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>产品编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>产品名称</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>bar_code</td><td>产品条码</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>category_id</td><td>产品分类编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>unit_id</td><td>单位编号</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>产品状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>standard</td><td>产品规格</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>产品备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>expiry_day</td><td>保质期天数</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>weight</td><td>基础重量（kg）</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>purchase_price</td><td>采购价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>sale_price</td><td>销售价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>min_price</td><td>最低价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-207D772D-EFD8-4D8E-BE38-275E7F92E198-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-207D772D-EFD8-4D8E-BE38-275E7F92E198-from">1.2.2.2 erp_product_category[ERP 产品分类]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>分类编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>parent_id</td><td>父分类编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>name</td><td>分类名称</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>code</td><td>分类编码</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>分类排序</td><td>INT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>status</td><td>开启状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-4886DFA6-DB4A-4680-8183-1BAAA8BECB8D-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-entities-column-4886DFA6-DB4A-4680-8183-1BAAA8BECB8D-from">1.2.2.3 erp_product_unit[ERP 产品单位表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>单位编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>单位名字</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>单位状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-from">1.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-column-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-views-column-from">1.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-from">1.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-column-to" href="#group-46BD37CB-43F7-4505-B346-6337A468FC5A-dicts-column-from">1.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-from">2 库存管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-diagrams-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-diagrams-from">2.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-from">2.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>ERP 产品库存表</td><td>erp_stock</td><td></td></tr>
+<tr><td>ERP 库存盘点单表</td><td>erp_stock_check</td><td></td></tr>
+<tr><td>ERP 库存盘点项表</td><td>erp_stock_check_item</td><td></td></tr>
+<tr><td>ERP 其它入库单表</td><td>erp_stock_in</td><td></td></tr>
+<tr><td>ERP 其它入库单项表</td><td>erp_stock_in_item</td><td></td></tr>
+<tr><td>ERP 库存调拨单表</td><td>erp_stock_move</td><td></td></tr>
+<tr><td>ERP 库存调拨项表</td><td>erp_stock_move_item</td><td></td></tr>
+<tr><td>ERP 其它入库单表</td><td>erp_stock_out</td><td></td></tr>
+<tr><td>ERP 其它出库单项表</td><td>erp_stock_out_item</td><td></td></tr>
+<tr><td>ERP 产品库存明细表</td><td>erp_stock_record</td><td></td></tr>
+<tr><td>ERP 仓库表</td><td>erp_warehouse</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-from">2.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-CA6BA711-332C-4DA1-B0B3-01D0324DE55B-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-CA6BA711-332C-4DA1-B0B3-01D0324DE55B-from">2.2.2.1 erp_stock[ERP 产品库存表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>库存数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-5C8A057F-9E49-4989-B1AD-233F6E996B67-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-5C8A057F-9E49-4989-B1AD-233F6E996B67-from">2.2.2.2 erp_stock_check[ERP 库存盘点单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>盘点编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>盘点单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>check_time</td><td>盘点时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>file_url</td><td>附件 URL</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-157DD4FC-C23B-4038-96BB-C331EFAECB3E-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-157DD4FC-C23B-4038-96BB-C331EFAECB3E-from">2.2.2.3 erp_stock_check_item[ERP 库存盘点项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>盘点项编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>check_id</td><td>盘点编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>stock_count</td><td>账面数量（当前库存）</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>actual_count</td><td>实际数量（实际库存）</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>盈亏数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-467E62CB-6053-4065-A877-66BA9224945A-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-467E62CB-6053-4065-A877-66BA9224945A-from">2.2.2.4 erp_stock_in[ERP 其它入库单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>入库编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>入库单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>supplier_id</td><td>供应商编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>in_time</td><td>入库时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>file_url</td><td>附件 URL</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-0E3232E1-122C-468E-B7CB-E64F72D96A8A-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-0E3232E1-122C-468E-B7CB-E64F72D96A8A-from">2.2.2.5 erp_stock_in_item[ERP 其它入库单项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>入库项编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>in_id</td><td>入库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>产品数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-68B7C0C5-EC6A-43B0-832A-9B420B24B5D0-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-68B7C0C5-EC6A-43B0-832A-9B420B24B5D0-from">2.2.2.6 erp_stock_move[ERP 库存调拨单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>调拨编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>调拨单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>move_time</td><td>调拨时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>file_url</td><td>附件 URL</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-9DA1FBFA-3FD5-4629-8BCF-E4211BEC2582-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-9DA1FBFA-3FD5-4629-8BCF-E4211BEC2582-from">2.2.2.7 erp_stock_move_item[ERP 库存调拨项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>调拨项编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>move_id</td><td>调拨编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>from_warehouse_id</td><td>调出仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>to_warehouse_id</td><td>调入仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>产品数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-7AA0A762-7B14-426C-BB3F-12742C62A333-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-7AA0A762-7B14-426C-BB3F-12742C62A333-from">2.2.2.8 erp_stock_out[ERP 其它入库单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>出库编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>出库单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>out_time</td><td>出库时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>file_url</td><td>附件 URL</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-D87C64A5-8E46-4A82-8A54-139CDC3B4899-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-D87C64A5-8E46-4A82-8A54-139CDC3B4899-from">2.2.2.9 erp_stock_out_item[ERP 其它出库单项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>出库项编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>out_id</td><td>出库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>产品数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-C4511E59-E02B-4333-AA95-3537298F2EA1-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-C4511E59-E02B-4333-AA95-3537298F2EA1-from">2.2.2.10 erp_stock_record[ERP 产品库存明细表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>出入库数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>总库存量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>biz_type</td><td>业务类型</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_id</td><td>业务编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_item_id</td><td>业务项编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_no</td><td>业务单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-B39D2CE1-DC2C-4A0B-9DAD-A742D2633198-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-entities-column-B39D2CE1-DC2C-4A0B-9DAD-A742D2633198-from">2.2.2.11 erp_warehouse[ERP 仓库表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>仓库编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>仓库名称</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>address</td><td>仓库地址</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>排序</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>principal</td><td>负责人</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_price</td><td>仓储费，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>truckage_price</td><td>搬运费，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>开启状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>default_status</td><td>是否默认</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-from">2.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-column-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-views-column-from">2.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-from">2.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-column-to" href="#group-04B7E495-870F-4A75-B92A-9B0D878BDA75-dicts-column-from">2.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-from">3 财务管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-diagrams-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-diagrams-from">3.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-from">3.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>ERP 结算账户</td><td>erp_account</td><td></td></tr>
+<tr><td>ERP 付款单表</td><td>erp_finance_payment</td><td></td></tr>
+<tr><td>ERP 付款项表</td><td>erp_finance_payment_item</td><td></td></tr>
+<tr><td>ERP 收款单表</td><td>erp_finance_receipt</td><td></td></tr>
+<tr><td>ERP 收款项表</td><td>erp_finance_receipt_item</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-from">3.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-60F70CBB-3483-4C8F-84A6-B291045B830D-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-60F70CBB-3483-4C8F-84A6-B291045B830D-from">3.2.2.1 erp_account[ERP 结算账户]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>账户名称</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>no</td><td>账户编码</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>开启状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>排序</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>default_status</td><td>是否默认</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-5044A244-2B52-4938-BFBC-6134924EBDD8-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-5044A244-2B52-4938-BFBC-6134924EBDD8-from">3.2.2.2 erp_finance_payment[ERP 付款单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>付款单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>payment_time</td><td>付款时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>finance_user_id</td><td>财务人员编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>supplier_id</td><td>供应商编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>付款账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>payment_price</td><td>实付金额，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-E264D0D0-681F-4F4F-BD7A-4CAB00CCF649-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-E264D0D0-681F-4F4F-BD7A-4CAB00CCF649-from">3.2.2.3 erp_finance_payment_item[ERP 付款项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>payment_id</td><td>付款单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_type</td><td>业务类型</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_id</td><td>业务编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_no</td><td>业务单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>应付欠款，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>paid_price</td><td>已付欠款，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>payment_price</td><td>本次付款，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-44993775-AD10-4739-ABB7-0E12B502AF2D-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-44993775-AD10-4739-ABB7-0E12B502AF2D-from">3.2.2.4 erp_finance_receipt[ERP 收款单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>收款单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>receipt_time</td><td>收款时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>finance_user_id</td><td>财务人员编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>收款账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>receipt_price</td><td>实收金额，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-DD7ADE11-226D-42E8-8B6F-AD13694296C6-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-entities-column-DD7ADE11-226D-42E8-8B6F-AD13694296C6-from">3.2.2.5 erp_finance_receipt_item[ERP 收款项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>receipt_id</td><td>收款单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_type</td><td>业务类型</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_id</td><td>业务编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_no</td><td>业务单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>应收金额，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>receipted_price</td><td>已收金额，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>receipt_price</td><td>本次收款，单位：分</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-from">3.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-column-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-views-column-from">3.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-from">3.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-column-to" href="#group-26F9378D-831C-429D-B908-CCEEE6C4873B-dicts-column-from">3.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-from">4 采购管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-diagrams-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-diagrams-from">4.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-from">4.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>ERP 采购入库表</td><td>erp_purchase_in</td><td></td></tr>
+<tr><td>ERP 销售入库项表</td><td>erp_purchase_in_items</td><td></td></tr>
+<tr><td>ERP 采购订单表</td><td>erp_purchase_order</td><td></td></tr>
+<tr><td>ERP 采购订单项表</td><td>erp_purchase_order_items</td><td></td></tr>
+<tr><td>ERP 采购退货表</td><td>erp_purchase_return</td><td></td></tr>
+<tr><td>ERP 采购退货项表</td><td>erp_purchase_return_items</td><td></td></tr>
+<tr><td>ERP 供应商表</td><td>erp_supplier</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-from">4.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-57C53D9D-906E-47FB-9544-B6512F60D3DF-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-57C53D9D-906E-47FB-9544-B6512F60D3DF-from">4.2.2.1 erp_purchase_in[ERP 采购入库表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>采购入库编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>采购状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>supplier_id</td><td>供应商编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>in_time</td><td>入库时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_id</td><td>采购订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_no</td><td>采购订单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>payment_price</td><td>已付款金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>other_price</td><td>其它金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-4A23CA20-8826-44FC-A5E4-7A6B33C38BCA-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-4A23CA20-8826-44FC-A5E4-7A6B33C38BCA-from">4.2.2.2 erp_purchase_in_items[ERP 销售入库项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>in_id</td><td>采购入库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_item_id</td><td>采购订单项编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-C031A1E8-50FF-4779-88EE-51A8DBC4CC50-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-C031A1E8-50FF-4779-88EE-51A8DBC4CC50-from">4.2.2.3 erp_purchase_order[ERP 采购订单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>采购单编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>采购状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>supplier_id</td><td>供应商编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_time</td><td>采购时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>deposit_price</td><td>定金金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>in_count</td><td>采购入库数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>return_count</td><td>采购退货数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-36058C35-0F5E-4E18-BFEC-99EE6A89A488-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-36058C35-0F5E-4E18-BFEC-99EE6A89A488-from">4.2.2.4 erp_purchase_order_items[ERP 采购订单项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>order_id</td><td>采购订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>in_count</td><td>采购入库数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>return_count</td><td>采购退货数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-96B2705A-7160-4FB8-B235-F98042EA2EE6-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-96B2705A-7160-4FB8-B235-F98042EA2EE6-from">4.2.2.5 erp_purchase_return[ERP 采购退货表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>采购退货编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>退货状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>supplier_id</td><td>供应商编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>return_time</td><td>退货时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_id</td><td>采购订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_no</td><td>采购订单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>refund_price</td><td>已退款金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>other_price</td><td>其它金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-BB9EBE0B-C7BA-43AC-BFAF-3A10249D0F02-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-BB9EBE0B-C7BA-43AC-BFAF-3A10249D0F02-from">4.2.2.6 erp_purchase_return_items[ERP 采购退货项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>return_id</td><td>采购退货编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_item_id</td><td>采购订单项编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-5FB2AC20-7C65-489F-A063-196014D48918-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-entities-column-5FB2AC20-7C65-489F-A063-196014D48918-from">4.2.2.7 erp_supplier[ERP 供应商表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>供应商编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>供应商名称</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact</td><td>联系人</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>mobile</td><td>手机号码</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>telephone</td><td>联系电话</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>email</td><td>电子邮箱</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>fax</td><td>传真</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>开启状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>排序</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>tax_no</td><td>纳税人识别号</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>bank_name</td><td>开户行</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>bank_account</td><td>开户账号</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>bank_address</td><td>开户地址</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-from">4.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-column-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-views-column-from">4.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-from">4.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-column-to" href="#group-9B1A2557-428D-4607-B862-DE2C06C7B2FD-dicts-column-from">4.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-from">5 销售管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-diagrams-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-diagrams-from">5.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-from">5.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>ERP 客户表</td><td>erp_customer</td><td></td></tr>
+<tr><td>ERP 销售订单表</td><td>erp_sale_order</td><td></td></tr>
+<tr><td>ERP 销售订单项表</td><td>erp_sale_order_items</td><td></td></tr>
+<tr><td>ERP 销售出库表</td><td>erp_sale_out</td><td></td></tr>
+<tr><td>ERP 销售出库项表</td><td>erp_sale_out_items</td><td></td></tr>
+<tr><td>ERP 销售退货表</td><td>erp_sale_return</td><td></td></tr>
+<tr><td>ERP 销售退货项表</td><td>erp_sale_return_items</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-from">5.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-7205649D-A064-4CF8-8F38-8F2943FAA470-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-7205649D-A064-4CF8-8F38-8F2943FAA470-from">5.2.2.1 erp_customer[ERP 客户表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>客户编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>客户名称</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact</td><td>联系人</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>mobile</td><td>手机号码</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>telephone</td><td>联系电话</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>email</td><td>电子邮箱</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>fax</td><td>传真</td><td>VARCHAR</td><td>30</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>开启状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>排序</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>tax_no</td><td>纳税人识别号</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>bank_name</td><td>开户行</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>bank_account</td><td>开户账号</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>bank_address</td><td>开户地址</td><td>VARCHAR</td><td>50</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-F9C4FDBB-5054-459B-8FEE-CB6F5C567DA4-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-F9C4FDBB-5054-459B-8FEE-CB6F5C567DA4-from">5.2.2.2 erp_sale_order[ERP 销售订单表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>销售单编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>销售状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sale_user_id</td><td>销售用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_time</td><td>下单时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>deposit_price</td><td>定金金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>out_count</td><td>销售出库数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>return_count</td><td>销售退货数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-DB8CFEE8-9FB7-4A2E-9566-23FD6E5F3994-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-DB8CFEE8-9FB7-4A2E-9566-23FD6E5F3994-from">5.2.2.3 erp_sale_order_items[ERP 销售订单项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>order_id</td><td>销售订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>out_count</td><td>销售出库数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>return_count</td><td>销售退货数量</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-20ABB7F0-0197-415C-B4EE-F97A74668669-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-20ABB7F0-0197-415C-B4EE-F97A74668669-from">5.2.2.4 erp_sale_out[ERP 销售出库表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>销售出库编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>出库状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sale_user_id</td><td>销售用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>out_time</td><td>出库时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_id</td><td>销售订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_no</td><td>销售订单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>receipt_price</td><td>已收款金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>other_price</td><td>其它金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-7B30404A-587B-48D2-9E42-8C7381BB0AAB-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-7B30404A-587B-48D2-9E42-8C7381BB0AAB-from">5.2.2.5 erp_sale_out_items[ERP 销售出库项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>out_id</td><td>销售出库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_item_id</td><td>销售订单项编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-787FF059-1733-4187-89C4-759C4D27B4F0-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-787FF059-1733-4187-89C4-759C4D27B4F0-from">5.2.2.6 erp_sale_return[ERP 销售退货表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>销售退货编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>status</td><td>退货状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>account_id</td><td>结算账户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sale_user_id</td><td>销售用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>return_time</td><td>退货时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_id</td><td>销售订单编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_no</td><td>销售订单号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>total_count</td><td>合计数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合计价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>refund_price</td><td>已退款金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>total_product_price</td><td>合计产品价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_tax_price</td><td>合计税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>优惠率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_price</td><td>优惠金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>other_price</td><td>其它金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>file_url</td><td>附件地址</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-EB000EFD-0118-44DA-9568-CA07C7BE2F4F-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-entities-column-EB000EFD-0118-44DA-9568-CA07C7BE2F4F-from">5.2.2.7 erp_sale_return_items[ERP 销售退货项表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>return_id</td><td>销售退货编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>order_item_id</td><td>销售订单项编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>warehouse_id</td><td>仓库编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_unit_id</td><td>产品单位单位</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_percent</td><td>税率，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>tax_price</td><td>税额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-views-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-views-from">5.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-views-column-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-views-column-from">5.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-from">5.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-column-to" href="#group-409FA29A-A013-47D5-AF12-D165627B16B3-dicts-column-from">5.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-__defaultGroup-to" href="#group-__defaultGroup-from">6 默认主题域</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-__defaultGroup-diagrams-to" href="#group-__defaultGroup-diagrams-from">6.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-__defaultGroup-entities-to" href="#group-__defaultGroup-entities-from">6.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-entities-column-to" href="#group-__defaultGroup-entities-column-from">6.2.2 表列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-__defaultGroup-views-to" href="#group-__defaultGroup-views-from">6.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-views-column-to" href="#group-__defaultGroup-views-column-from">6.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-__defaultGroup-dicts-to" href="#group-__defaultGroup-dicts-from">6.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-dicts-column-to" href="#group-__defaultGroup-dicts-column-from">6.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li></ul></span></body>
+</html>
