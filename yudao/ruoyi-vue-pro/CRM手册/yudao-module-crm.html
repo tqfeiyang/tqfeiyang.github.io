@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>yudao-module-crm</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+        html , body {
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          padding: 10px;
+        }
+        .left {
+            display: inline-block;
+            width: 25%;
+            height: 100%;
+            overflow: auto;
+            border-right: 1px solid #DFE3EB;
+            padding: 10px
+        }
+        .right {
+            display: inline-block;
+            width: 75%;
+            height: 100%;
+            padding: 10px;
+            overflow: auto;
+        }
+        .index {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        li {
+            list-style: none;
+            padding: 5px;
+        }
+        .first-li {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .second-li {
+            font-weight: bold;
+        }
+        .third-li {
+            font-weight: normal;
+        }
+        .block {
+            display: block;
+        }
+        table {
+            width: 100%;
+            margin-top: 10px;
+            border-color: #E8E8E8;
+        }
+        .first-tr {
+            text-align: center;
+        }
+        tr:hover {
+            background: #ECF9FF;
+        }
+        td {
+            font-weight: normal;
+            padding: 5px;
+            white-space: nowrap;
+        }
+        a {
+            color: #000000;
+            background-color: transparent;
+            text-decoration: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .group {
+            color: green;
+        }
+        .group-list {
+            color: #1890ff;
+        }
+    </style>
+</head>
+<body><span class="left"><center class="index">目录</center>
+<hr><ul>
+<li class="first-li"><a class="group" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-to">1 线索管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-diagrams-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-column-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-column-from" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-to">2 客户管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-diagrams-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-column-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-column-from" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-to">3 商机管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-diagrams-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-column-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-column-from" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-to">4 合同管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-diagrams-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-views-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-views-column-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-column-from" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-to">5 回款管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-diagrams-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-column-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-column-from" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-to">6 产品管理</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-diagrams-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-column-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-column-from" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul><li class="first-li"><a class="group" id="group-__defaultGroup-from" href="#group-__defaultGroup-to">7 默认主题域</a>
+<ul><li class="second-li"><a class="group-list" href="#">1 关联关系</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-diagrams-from" href="#group-__defaultGroup-diagrams-to">1 关联关系清单</a></li>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">2 数据表</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-entities-from" href="#group-__defaultGroup-entities-to">1 表清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-entities-column-from" href="#group-__defaultGroup-entities-column-to">2 表列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">3 视图</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-views-from" href="#group-__defaultGroup-views-to">1 视图清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-views-column-from" href="#group-__defaultGroup-views-column-to">2 视图列清单</a>
+<ul></ul></li></ul></li></ul><ul><li class="second-li"><a class="group-list" href="#">4 字典</a></li>
+<ul><li class="second-li"><a class="group-list" id="group-__defaultGroup-dicts-from" href="#group-__defaultGroup-dicts-to">1 字典清单</a></li>
+<li class="second-li"><a class="group-list" id="group-__defaultGroup-dicts-column-from" href="#group-__defaultGroup-dicts-column-to">2 字典条目清单</a>
+<ul></ul></li></ul></li></ul></ul>
+</span><span  class="right"><ul>
+
+<li class="first-li"><a class="group" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-from">1 线索管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-diagrams-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-diagrams-from">1.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-from">1.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 线索表</td><td>crm_clue</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-from">1.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-26B0F31C-FA18-416B-B188-C7498A9FB81D-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-entities-column-26B0F31C-FA18-416B-B188-C7498A9FB81D-from">1.2.2.1 crm_clue[CRM 线索表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号，主键自增</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>线索名称</td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>follow_up_status</td><td>跟进状态</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>contact_last_time</td><td>最后跟进时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_last_content</td><td>最后跟进内容</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact_next_time</td><td>下次联系时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>transform_status</td><td>转化状态</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>mobile</td><td>手机号</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>telephone</td><td>电话</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>qq</td><td>QQ</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>wechat</td><td>微信</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>email</td><td>邮箱</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>area_id</td><td>地区编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>detail_address</td><td>详细地址</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>industry_id</td><td>所属行业</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>level</td><td>客户等级</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>source</td><td>客户来源</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-from">1.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-column-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-views-column-from">1.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-from">1.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-column-to" href="#group-7472BE65-DFC4-4D41-A605-AE876465E7F1-dicts-column-from">1.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-from">2 客户管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-diagrams-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-diagrams-from">2.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-from">2.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 联系人</td><td>crm_contact</td><td></td></tr>
+<tr><td>CRM 联系人商机关联表</td><td>crm_contact_business</td><td></td></tr>
+<tr><td>CRM 客户表</td><td>crm_customer</td><td></td></tr>
+<tr><td>CRM 客户限制配置表</td><td>crm_customer_limit_config</td><td></td></tr>
+<tr><td>CRM 客户公海配置表</td><td>crm_customer_pool_config</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-from">2.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-F15230FF-20FF-4BC2-A82A-BFF00160E18B-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-F15230FF-20FF-4BC2-A82A-BFF00160E18B-from">2.2.2.1 crm_contact[CRM 联系人]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>联系人名称</td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_last_time</td><td>最后跟进时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_last_content</td><td>最后跟进内容</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact_next_time</td><td>下次联系时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人用户编号</td><td>VARCHAR</td><td>256</td><td><td></td></td><td></td></tr>
+<tr><td>mobile</td><td>手机号</td><td>VARCHAR</td><td>16</td><td><td></td></td><td></td></tr>
+<tr><td>telephone</td><td>电话</td><td>VARCHAR</td><td>16</td><td><td></td></td><td></td></tr>
+<tr><td>email</td><td>电子邮箱</td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>qq</td><td></td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>wechat</td><td></td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>area_id</td><td>地区</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>detail_address</td><td>地址</td><td>VARCHAR</td><td>256</td><td><td></td></td><td></td></tr>
+<tr><td>sex</td><td>性别</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>master</td><td>是否关键决策人</td><td>BIT</td><td>1</td><td><td></td></td><td></td></tr>
+<tr><td>parent_id</td><td>直系上属</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>post</td><td>职务</td><td>VARCHAR</td><td>32</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建人</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>updater</td><td>更新人</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>deleted</td><td></td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td></td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-D3B3E4D0-924E-49CB-856F-1B5002B2A291-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-D3B3E4D0-924E-49CB-856F-1B5002B2A291-from">2.2.2.2 crm_contact_business[CRM 联系人商机关联表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>INT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>contact_id</td><td>联系人id</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>business_id</td><td>商机id</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-0AE3E289-685F-4010-A15C-B6452666B21E-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-0AE3E289-685F-4010-A15C-B6452666B21E-from">2.2.2.3 crm_customer[CRM 客户表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号，主键自增</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>客户名称</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>follow_up_status</td><td>跟进状态</td><td>BIT</td><td>1</td><td><td>0</td></td><td></td></tr>
+<tr><td>contact_last_time</td><td>最后跟进时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_last_content</td><td>最后跟进内容</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact_next_time</td><td>下次联系时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_time</td><td>成为负责人的时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>lock_status</td><td>锁定状态</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>deal_status</td><td>成交状态</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>mobile</td><td>手机</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>telephone</td><td>电话</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>qq</td><td>QQ</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>wechat</td><td>微信</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>email</td><td>邮箱</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>area_id</td><td>地区编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>detail_address</td><td>详细地址</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>industry_id</td><td>所属行业</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>level</td><td>客户等级</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>source</td><td>客户来源</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-B9B04FA4-D678-42F1-BC3C-87B4F30FA537-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-B9B04FA4-D678-42F1-BC3C-87B4F30FA537-from">2.2.2.4 crm_customer_limit_config[CRM 客户限制配置表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>type</td><td>规则类型 1: 拥有客户数限制，2:锁定客户数限制</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>user_ids</td><td>规则适用人群</td><td>VARCHAR</td><td>2048</td><td><td></td></td><td></td></tr>
+<tr><td>dept_ids</td><td>规则适用部门</td><td>VARCHAR</td><td>2048</td><td><td></td></td><td></td></tr>
+<tr><td>max_count</td><td>数量上限</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>deal_count_enabled</td><td>成交客户是否占有拥有客户数(当 type = 1 时)</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-288C315C-F2F4-423F-816E-E549464FB9EA-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-entities-column-288C315C-F2F4-423F-816E-E549464FB9EA-from">2.2.2.5 crm_customer_pool_config[CRM 客户公海配置表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>enabled</td><td>是否启用客户公海</td><td>BIT</td><td>1</td><td><td></td></td><td></td></tr>
+<tr><td>contact_expire_days</td><td>未跟进放入公海天数</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>deal_expire_days</td><td>未成交放入公海天数</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>notify_enabled</td><td>是否开启提前提醒</td><td>BIT</td><td>1</td><td><td></td></td><td></td></tr>
+<tr><td>notify_days</td><td>提前提醒天数</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-from">2.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-column-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-views-column-from">2.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-from">2.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-column-to" href="#group-480C2979-A5D3-49B3-87EA-A99750F3F00C-dicts-column-from">2.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-from">3 商机管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-diagrams-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-diagrams-from">3.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-from">3.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 商机表</td><td>crm_business</td><td></td></tr>
+<tr><td>CRM 商机产品关联表</td><td>crm_business_product</td><td></td></tr>
+<tr><td>CRM 商机状态表</td><td>crm_business_status</td><td></td></tr>
+<tr><td>CRM 商机状态组表</td><td>crm_business_status_type</td><td></td></tr>
+<tr><td>CRM 联系人商机关联表</td><td>crm_contact_business</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-from">3.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-A773B333-EF05-4908-8A0D-FCCCEB393691-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-A773B333-EF05-4908-8A0D-FCCCEB393691-from">3.2.2.1 crm_business[CRM 商机表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>商机名称</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>follow_up_status</td><td>跟进状态</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>contact_last_time</td><td>最后跟进时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_next_time</td><td>下次联系时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>status_type_id</td><td>商机状态类型编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>status_id</td><td>商机状态编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>end_status</td><td>结束状态：1-赢单 2-输单3-无效</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>deal_time</td><td>预计成交日期</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_product_price</td><td>产品总金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>整单折扣，百分比</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>商机总金额，单位：元</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建人</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>updater</td><td>更新人</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>end_remark</td><td>结束时的备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>deleted</td><td>逻辑删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户ID</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-0B0B5417-9562-45AB-8438-E53D24F37CA7-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-0B0B5417-9562-45AB-8438-E53D24F37CA7-from">3.2.2.2 crm_business_product[CRM 商机产品关联表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>business_id</td><td>商机编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>business_price</td><td>商机价格</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总计价格</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>1</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-F2750AF2-819E-41D2-BE57-7D3FA43ACD6C-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-F2750AF2-819E-41D2-BE57-7D3FA43ACD6C-from">3.2.2.3 crm_business_status[CRM 商机状态表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>type_id</td><td>状态类型编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>name</td><td>状态类型名</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>percent</td><td>赢单率</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>sort</td><td>排序</td><td>INT</td><td></td><td><td>1</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-D5A5B36B-3706-42DB-9C64-E293A466C9D8-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-D5A5B36B-3706-42DB-9C64-E293A466C9D8-from">3.2.2.4 crm_business_status_type[CRM 商机状态组表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>状态组名</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>dept_ids</td><td>使用的部门编号</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-D3B3E4D0-924E-49CB-856F-1B5002B2A291-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-entities-column-D3B3E4D0-924E-49CB-856F-1B5002B2A291-from">3.2.2.5 crm_contact_business[CRM 联系人商机关联表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>INT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>contact_id</td><td>联系人id</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>business_id</td><td>商机id</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-from">3.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-column-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-views-column-from">3.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-from">3.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-column-to" href="#group-E42C9EE8-1E08-4086-ADAB-284B297FAAF1-dicts-column-from">3.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-from">4 合同管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-diagrams-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-diagrams-from">4.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-from">4.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 合同表</td><td>crm_contract</td><td></td></tr>
+<tr><td>CRM 合同配置表</td><td>crm_contract_config</td><td></td></tr>
+<tr><td>CRM 合同产品关联表</td><td>crm_contract_product</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-from">4.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-3859CFC9-C91D-46C2-AE1D-572E03197250-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-3859CFC9-C91D-46C2-AE1D-572E03197250-from">4.2.2.1 crm_contract[CRM 合同表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号，主键自增</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>合同名称</td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>no</td><td>合同编号</td><td>VARCHAR</td><td>128</td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>business_id</td><td>商机编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contact_last_time</td><td>最后跟进时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>process_instance_id</td><td>工作流编号</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>audit_status</td><td>审批状态</td><td>TINYINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>order_date</td><td>下单日期</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>start_time</td><td>开始时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>end_time</td><td>结束时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>total_product_price</td><td>产品总金额</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>discount_percent</td><td>整单折扣</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>合同总金额</td><td>DECIMAL</td><td>10</td><td><td></td></td><td></td></tr>
+<tr><td>sign_contact_id</td><td>联系人编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>sign_user_id</td><td>公司签约人</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-FF12D3B6-DB10-4A57-B090-4E0BAEC1C0C5-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-FF12D3B6-DB10-4A57-B090-4E0BAEC1C0C5-from">4.2.2.2 crm_contract_config[CRM 合同配置表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>notify_enabled</td><td>是否开启提前提醒</td><td>BIT</td><td>1</td><td><td></td></td><td></td></tr>
+<tr><td>notify_days</td><td>提前提醒天数</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-44E2F993-C371-4E70-9685-5C13B4D944D6-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-entities-column-44E2F993-C371-4E70-9685-5C13B4D944D6-from">4.2.2.3 crm_contract_product[CRM 合同产品关联表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>主键</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>contract_id</td><td>合同编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_id</td><td>产品编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>product_price</td><td>产品单价</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>contract_price</td><td>合同价格</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>count</td><td>数量</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>total_price</td><td>总计价格</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>1</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-views-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-views-from">4.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-views-column-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-views-column-from">4.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-from">4.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-column-to" href="#group-5156039D-E742-4B32-8027-0DC24E6807A6-dicts-column-from">4.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-from">5 回款管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-diagrams-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-diagrams-from">5.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-from">5.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 回款表</td><td>crm_receivable</td><td></td></tr>
+<tr><td>CRM 回款计划表</td><td>crm_receivable_plan</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-from">5.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-D6444314-244E-4106-AF3C-34905BB757FE-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-D6444314-244E-4106-AF3C-34905BB757FE-from">5.2.2.1 crm_receivable[CRM 回款表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>ID</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>no</td><td>回款编号</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>plan_id</td><td>回款计划ID</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户ID</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contract_id</td><td>合同ID</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>audit_status</td><td>审批状态</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>process_instance_id</td><td>工作流编号</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>return_time</td><td>回款日期</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>return_type</td><td>回款方式</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>price</td><td>回款金额</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-BB80AB68-98DD-4AB7-A69F-2B481DBBFAE9-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-entities-column-BB80AB68-98DD-4AB7-A69F-2B481DBBFAE9-from">5.2.2.2 crm_receivable_plan[CRM 回款计划表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>ID</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>period</td><td>期数</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>customer_id</td><td>客户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>contract_id</td><td>合同编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>receivable_id</td><td>回款编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>return_time</td><td>计划回款日期</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>return_type</td><td>计划还款方式</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>price</td><td>计划回款金额</td><td>DECIMAL</td><td>24</td><td><td></td></td><td></td></tr>
+<tr><td>remind_days</td><td>提前几天提醒</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remind_time</td><td>提醒日期</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>remark</td><td>备注</td><td>VARCHAR</td><td>500</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-from">5.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-column-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-views-column-from">5.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-from">5.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-column-to" href="#group-AAFD91B6-31F0-409E-88DA-CB2066909894-dicts-column-from">5.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-from">6 产品管理</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-diagrams-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-diagrams-from">6.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-from">6.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 产品表</td><td>crm_product</td><td></td></tr>
+<tr><td>CRM 产品分类表</td><td>crm_product_category</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-from">6.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-1CB44A79-A5D7-4F0F-9839-484D390D9A7B-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-1CB44A79-A5D7-4F0F-9839-484D390D9A7B-from">6.2.2.1 crm_product[CRM 产品表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>产品编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>产品名称</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>no</td><td>产品编码</td><td>VARCHAR</td><td>20</td><td><td></td></td><td></td></tr>
+<tr><td>unit</td><td>单位</td><td>TINYINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>price</td><td>价格，单位：元</td><td>DECIMAL</td><td>24</td><td><td>0.000000</td></td><td></td></tr>
+<tr><td>status</td><td>状态</td><td>TINYINT</td><td></td><td><td>1</td></td><td></td></tr>
+<tr><td>category_id</td><td>产品分类编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>description</td><td>产品描述</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>owner_user_id</td><td>负责人的用户编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-1FBF2AA2-2C64-46F2-BD2E-0BF383168B9E-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-entities-column-1FBF2AA2-2C64-46F2-BD2E-0BF383168B9E-from">6.2.2.2 crm_product_category[CRM 产品分类表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>分类编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>name</td><td>分类名称</td><td>VARCHAR</td><td>100</td><td><td></td></td><td></td></tr>
+<tr><td>parent_id</td><td>父级编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-from">6.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-column-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-views-column-from">6.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-from">6.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-column-to" href="#group-0B80A2C2-1D25-47FC-8068-F09F5DA5A789-dicts-column-from">6.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li><li class="first-li"><a class="group" id="group-__defaultGroup-to" href="#group-__defaultGroup-from">7 默认主题域</a><ul>
+<li class="second-li"><a class="group-list" class="block" id="group-__defaultGroup-diagrams-to" href="#group-__defaultGroup-diagrams-from">7.1 关联关系清单</a>
+<span>该模块未配置关系图</span>
+</li><hr>
+<li><a class="group-list" id="group-__defaultGroup-entities-to" href="#group-__defaultGroup-entities-from">7.2.1  表清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+<tr><td>CRM 跟进记录</td><td>crm_follow_up_record</td><td></td></tr>
+<tr><td>CRM 数据权限表</td><td>crm_permission</td><td></td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-entities-column-to" href="#group-__defaultGroup-entities-column-from">7.2.2 表列清单</a>
+
+<ul style="padding: 0"> <li><a class="block" id="group-__defaultGroup-entities-column-036EEC9F-8022-49BE-95C8-37999936E511-to" href="#group-__defaultGroup-entities-column-036EEC9F-8022-49BE-95C8-37999936E511-from">7.2.2.1 crm_follow_up_record[CRM 跟进记录]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>biz_type</td><td>数据类型</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>biz_id</td><td>数据编号</td><td>BIGINT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>type</td><td>跟进类型</td><td>INT</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>content</td><td>跟进内容</td><td>VARCHAR</td><td>512</td><td><td></td></td><td></td></tr>
+<tr><td>next_time</td><td>下次联系时间</td><td>DATETIME</td><td></td><td><td></td></td><td></td></tr>
+<tr><td>pic_urls</td><td>图片</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>file_urls</td><td>附件</td><td>VARCHAR</td><td>1024</td><td><td></td></td><td></td></tr>
+<tr><td>business_ids</td><td>关联的商机编号数组</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>contact_ids</td><td>关联的联系人编号数组</td><td>VARCHAR</td><td>255</td><td><td></td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+ <li><a class="block" id="group-__defaultGroup-entities-column-E1CFE44C-5961-4418-8095-0FB0E6E0A75C-to" href="#group-__defaultGroup-entities-column-E1CFE44C-5961-4418-8095-0FB0E6E0A75C-from">7.2.2.2 crm_permission[CRM 数据权限表]</a>
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>代码</td><td>名称</td><td>数据类型(MYSQL)</td><td>长度</td><td>主键</td><td>默认值</td><td>备注</td></tr>
+<tr><td>id</td><td>编号</td><td>BIGINT</td><td></td><td>√<td></td></td><td></td></tr>
+<tr><td>biz_type</td><td>数据类型</td><td>TINYINT</td><td></td><td><td>100</td></td><td></td></tr>
+<tr><td>biz_id</td><td>数据编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>user_id</td><td>用户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>level</td><td>会员等级</td><td>INT</td><td></td><td><td>0</td></td><td></td></tr>
+<tr><td>creator</td><td>创建者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>create_time</td><td>创建时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>updater</td><td>更新者</td><td>VARCHAR</td><td>64</td><td><td></td></td><td></td></tr>
+<tr><td>update_time</td><td>更新时间</td><td>DATETIME</td><td></td><td><td>'CURRENT_TIMESTAMP'</td></td><td></td></tr>
+<tr><td>deleted</td><td>是否删除</td><td>BIT</td><td>1</td><td><td>b'0'</td></td><td></td></tr>
+<tr><td>tenant_id</td><td>租户编号</td><td>BIGINT</td><td></td><td><td>0</td></td><td></td></tr>
+</table>
+</li>
+
+</li></ul><hr></li><li><a class="group-list" id="group-__defaultGroup-views-to" href="#group-__defaultGroup-views-from">7.3.1  视图清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-views-column-to" href="#group-__defaultGroup-views-column-from">7.3.2 视图列清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li><li><a class="group-list" id="group-__defaultGroup-dicts-to" href="#group-__defaultGroup-dicts-from">7.4.1  字典清单</a>
+
+
+
+<table border="1" cellspacing="0">
+<tr class="first-tr"><td>名称</td><td>代码</td><td>备注</td></tr>
+</table>
+</li><hr>
+
+<li><a class="group-list" id="group-__defaultGroup-dicts-column-to" href="#group-__defaultGroup-dicts-column-from">7.4.2 字典条目清单</a>
+
+<ul style="padding: 0"></li></ul><hr></li></ul></li></ul><hr></li></ul></span></body>
+</html>
